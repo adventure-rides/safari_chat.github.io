@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--
+    If you are serving your web app in a path other than the root, change the
+    href value below to reflect the base path you are serving from.
+
+    The path provided below has to start and end with a slash "/" in order for
+    it to work correctly.
+
+    For more details:
+    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+
+    This is a placeholder for base href that will be replaced by the value of
+    the `--base-href` argument provided to `flutter build` or `flutter run`.
+  -->
+  <!--<base href="/"> -->
+  <base href="./">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="A new Flutter project.">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="adventure_rides">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png"/>
+
+  <title>safari_chat</title>
+  <link rel="manifest" href="./manifest.json">
+
+  <!--
+   Tawk.to Script
+  <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+      var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+      s1.async=true;
+      s1.src='https://embed.tawk.to/674ed1112480f5b4f5a70989/1ie5u1bd1';  // Replace with your Tawk.to ID
+      s1.charset='UTF-8';
+      s1.setAttribute('crossorigin','*');
+      s0.parentNode.insertBefore(s1,s0);
+    })();
+  </script>
+  -->
+  <script src="https://js.stripe.com/v3/"></script>
+  <script>
+  window.addEventListener('load', function() {
+    if (window.location.href.includes('success')) {
+      window.parent.postMessage({ type: 'payment-success' }, '*');
+    }
+    if (window.location.href.includes('cancel')) {
+      window.parent.postMessage({ type: 'payment-cancel' }, '*');
+    }
+  });
+</script>
+
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAwPBfJ3eWaqiUXeAx4GuG-GUeE0dHC6TA&libraries=places"></script>
+    <!--<script src="https://js.stripe.com/v3/"></script>-->
+
+</head>
+<body>
+<script src="flutter_bootstrap.js" async></script>
+</body>
+</html>
